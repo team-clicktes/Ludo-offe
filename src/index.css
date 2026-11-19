@@ -1,0 +1,351 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Trebuchet MS", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-body: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    background: radial-gradient(circle at 50% 20%, #2b1870 0%, #140b42 52%, #090522 100%);
+    color: #ffffff;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Portrait 9:16 mobile stage frame that fills small screens and centers cleanly on desktop */
+.ludo-shell-backdrop {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(88, 66, 210, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 80% 85%, rgba(37, 99, 235, 0.25) 0%, transparent 50%),
+    linear-gradient(160deg, #0b0729 0%, #16104a 45%, #231157 100%);
+}
+
+.ludo-phone-frame {
+  background:
+    radial-gradient(circle at 50% 12%, rgba(79, 70, 229, 0.42) 0%, transparent 52%),
+    radial-gradient(circle at 50% 90%, rgba(124, 58, 237, 0.28) 0%, transparent 50%),
+    linear-gradient(180deg, #16195c 0%, #1e1354 48%, #130b38 100%);
+}
+
+/* Glossy 3D Royal Gold Buttons */
+.btn-gold-3d {
+  background: linear-gradient(180deg, #ffe77a 0%, #f5b915 48%, #d48200 100%);
+  border: 2px solid #fff3b0;
+  box-shadow:
+    0 5px 0 #8a4b00,
+    0 10px 22px rgba(245, 185, 21, 0.35),
+    inset 0 2px 3px rgba(255, 255, 255, 0.75);
+  color: #3a1d00;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.btn-gold-3d:hover:not(:disabled) {
+  filter: brightness(1.06);
+}
+
+.btn-gold-3d:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow:
+    0 2px 0 #8a4b00,
+    0 4px 12px rgba(245, 185, 21, 0.25),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.btn-emerald-3d {
+  background: linear-gradient(180deg, #5ef29a 0%, #16c465 50%, #0a8a43 100%);
+  border: 2px solid #bbf7d0;
+  box-shadow:
+    0 5px 0 #055226,
+    0 10px 24px rgba(22, 196, 101, 0.38),
+    inset 0 2px 3px rgba(255, 255, 255, 0.65);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 50, 20, 0.55);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.btn-emerald-3d:hover:not(:disabled) {
+  filter: brightness(1.06);
+}
+
+.btn-emerald-3d:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow:
+    0 2px 0 #055226,
+    0 4px 12px rgba(22, 196, 101, 0.25);
+}
+
+.btn-royal-3d {
+  background: linear-gradient(180deg, #4338ca 0%, #312594 55%, #1f1766 100%);
+  border: 1.5px solid rgba(250, 204, 21, 0.55);
+  box-shadow:
+    0 3px 0 #110c42,
+    0 6px 14px rgba(0, 0, 0, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.28);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.btn-royal-3d:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.btn-royal-3d:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #110c42;
+}
+
+/* Gold rimmed dark royal panel */
+.royal-card {
+  background: linear-gradient(180deg, rgba(46, 36, 118, 0.94) 0%, rgba(25, 19, 76, 0.97) 100%);
+  border: 1.5px solid rgba(251, 191, 36, 0.65);
+  box-shadow:
+    0 12px 32px rgba(6, 4, 24, 0.62),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.card-2p-blue {
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 48%, #0369a1 100%);
+  box-shadow: 0 4px 0 #075985, inset 0 2px 3px rgba(255, 255, 255, 0.55);
+}
+
+.card-3p-green {
+  background: linear-gradient(180deg, #4ade80 0%, #16a34a 50%, #15803d 100%);
+  box-shadow: 0 4px 0 #14532d, inset 0 2px 3px rgba(255, 255, 255, 0.55);
+}
+
+.card-4p-purple {
+  background: linear-gradient(180deg, #e879f9 0%, #a21caf 50%, #701a75 100%);
+  box-shadow: 0 4px 0 #4a044e, inset 0 2px 3px rgba(255, 255, 255, 0.55);
+}
+
+.card-cpu-orange {
+  background: linear-gradient(180deg, #fcd34d 0%, #f59e0b 48%, #d97706 100%);
+  box-shadow: 0 4px 0 #92400e, inset 0 2px 3px rgba(255, 255, 255, 0.65);
+}
+
+.btn-purple-3d {
+  background: linear-gradient(180deg, #a855f7 0%, #7e22ce 50%, #581c87 100%);
+  border: 2px solid #e9d5ff;
+  box-shadow:
+    0 4px 0 #3b0764,
+    0 8px 18px rgba(88, 28, 135, 0.45),
+    inset 0 2px 2px rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.btn-purple-3d:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.btn-purple-3d:active:not(:disabled) {
+  transform: translateY(2px);
+}
+
+/* 3D Ludo Board Frame */
+.ludo-board-frame {
+  background: linear-gradient(145deg, #fbbf24 0%, #d97706 48%, #92400e 100%);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.6),
+    0 6px 0 #6b2f06,
+    inset 0 2px 3px rgba(255, 251, 235, 0.8);
+}
+
+/* 3D Dice Cube */
+.dice-scene {
+  perspective: 420px;
+}
+
+.dice-cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.36s cubic-bezier(0.22, 1.28, 0.36, 1);
+}
+
+.dice-cube.rolling {
+  animation: diceTumble 0.34s linear infinite;
+}
+
+@keyframes diceTumble {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1.06);
+  }
+  50% {
+    transform: rotateX(190deg) rotateY(220deg) rotateZ(90deg) scale(1.14);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) scale(1.06);
+  }
+}
+
+.dice-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 65%, #cbd5e1 100%);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    inset 0 3px 6px rgba(255, 255, 255, 0.95),
+    inset 0 -3px 6px rgba(100, 116, 139, 0.35);
+  backface-visibility: hidden;
+}
+
+/* Selectable token pulse */
+@keyframes tokenSelectableBounce {
+  0%,
+  100% {
+    transform: translate(-50%, -62%) scale(1.08);
+  }
+  50% {
+    transform: translate(-50%, -76%) scale(1.18);
+  }
+}
+
+.token-selectable {
+  animation: tokenSelectableBounce 0.72s ease-in-out infinite;
+  z-index: 40 !important;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(420px) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+.confetti-piece {
+  animation: confettiFall 2.4s linear infinite;
+}
+
+@keyframes starTwinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.15);
+  }
+}
+
+.bg-star {
+  animation: starTwinkle 3.2s ease-in-out infinite;
+}
+
+/* Fast GPU-accelerated directional page transitions */
+@keyframes pageSlideInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(24%, 0, 0) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes pageSlideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-16%, 0, 0) scale(0.98);
+  }
+}
+
+@keyframes pageSlideInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-24%, 0, 0) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes pageSlideOutRight {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(16%, 0, 0) scale(0.98);
+  }
+}
+
+@keyframes pageZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.page-enter-right {
+  animation: pageSlideInRight 0.17s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.page-exit-left {
+  animation: pageSlideOutLeft 0.17s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.page-enter-left {
+  animation: pageSlideInLeft 0.17s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.page-exit-right {
+  animation: pageSlideOutRight 0.17s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.page-enter-zoom {
+  animation: pageZoomIn 0.18s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dice-cube.rolling,
+  .token-selectable,
+  .confetti-piece,
+  .bg-star,
+  .page-enter-right,
+  .page-exit-left,
+  .page-enter-left,
+  .page-exit-right,
+  .page-enter-zoom {
+    animation: none !important;
+  }
+}

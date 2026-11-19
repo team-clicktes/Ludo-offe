@@ -1,0 +1,6 @@
+{
+  "name": "LUDO STAR",
+  "description": "Offline 3D Ludo mobile board game with classic rules, pass-and-play multiplayer, and computer opponents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
